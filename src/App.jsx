@@ -33,11 +33,26 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Project Orca — Marathon</h1>
-        <div className="meta">
-          <span>🗓 Race day: <b>Sunday, October 11, 2026</b></span>
-          <span className="countdown">{days} days to go</span>
-          <span>{zones ? "Paces personalized ✓" : "Paces not set — see the Paces tab"}</span>
+        <div className="brand">
+          <span className="brand-mark">🐋</span>
+          <div className="brand-text">
+            <h1>Project Orca</h1>
+            <span className="brand-sub">Marathon Training Dashboard</span>
+          </div>
+        </div>
+        <div className="stat-row">
+          <div className="stat">
+            <span className="stat-label">Race Day</span>
+            <span className="stat-value">Sun, Oct 11, 2026</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">Countdown</span>
+            <span className="stat-value countdown">{days} days to go</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">Paces</span>
+            <span className="stat-value">{zones ? "Personalized ✓" : "Not set"}</span>
+          </div>
         </div>
       </header>
 
