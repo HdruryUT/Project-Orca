@@ -1,0 +1,441 @@
+npm warn cleanup Failed to remove some directories [
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-x64-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-x64-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-x64-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-s390x-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-s390x-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-s390x-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-riscv64-musl',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-riscv64-musl'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-riscv64-musl'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-x64-msvc',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-x64-msvc'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-x64-msvc'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-arm64-msvc',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-arm64-msvc'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-arm64-msvc'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-riscv64-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-riscv64-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-riscv64-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-ppc64-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-ppc64-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-ppc64-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-loong64-musl',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-loong64-musl'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-loong64-musl'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm64-musl',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm64-musl'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm64-musl'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-x64-musl',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-x64-musl'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-x64-musl'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm-gnueabihf',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm-gnueabihf'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm-gnueabihf'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-loong64-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-loong64-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-loong64-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-freebsd-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-freebsd-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-freebsd-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-freebsd-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-freebsd-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-freebsd-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-darwin-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-darwin-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-darwin-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-darwin-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-darwin-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-darwin-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-android-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-android-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-android-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-android-arm-eabi',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-android-arm-eabi'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-android-arm-eabi'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-ia32-msvc',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-ia32-msvc'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-win32-ia32-msvc'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@napi-rs/lzma-linux-x64-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@napi-rs/lzma-linux-x64-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@napi-rs/lzma-linux-x64-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-x64-gnu',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-x64-gnu'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-x64-gnu'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-ppc64-musl',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-ppc64-musl'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-ppc64-musl'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm-musleabihf',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm-musleabihf'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-linux-arm-musleabihf'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/netbsd-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/netbsd-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/netbsd-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-openbsd-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-openbsd-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-openbsd-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-s390x',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-s390x'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-s390x'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/sunos-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/sunos-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/sunos-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-openharmony-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-openharmony-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@rollup/rollup-openharmony-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-mips64el',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-mips64el'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-mips64el'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-loong64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-loong64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-loong64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-arm',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-arm'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-arm'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/freebsd-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/freebsd-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/freebsd-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/freebsd-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/freebsd-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/freebsd-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/darwin-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/darwin-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/darwin-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/darwin-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/darwin-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/darwin-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-arm64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-arm64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-arm64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/aix-ppc64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/aix-ppc64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/aix-ppc64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-riscv64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-riscv64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-riscv64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-arm',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-arm'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/android-arm'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-ppc64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-ppc64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-ppc64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-ia32',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-ia32'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-ia32'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/fsevents',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/fsevents'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/fsevents'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-ia32',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-ia32'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/win32-ia32'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/openbsd-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/openbsd-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/openbsd-x64'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-x64',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-x64'] {
+npm warn cleanup       errno: -1,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: '/sessions/gifted-youthful-johnson/mnt/outputs/marathon-app/node_modules/@esbuild/linux-x64'
+npm warn cleanup     }
+npm warn cleanup   ]
+npm warn cleanup ]
+
+added 62 packages in 10s
+npm notice
+npm notice New major version of npm available! 10.9.8 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice

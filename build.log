@@ -1,0 +1,13 @@
+
+> project-orca-marathon@1.0.0 build
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 42 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.41 kB │ gzip:  0.28 kB
+dist/assets/index-CA4H4omA.css    5.64 kB │ gzip:  1.76 kB
+dist/assets/index-CpWrXfRq.js   167.93 kB │ gzip: 54.86 kB
+✓ built in 339ms
