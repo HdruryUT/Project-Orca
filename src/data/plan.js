@@ -1,8 +1,7 @@
 // 10-week marathon training plan — Project Orca
 // Race day: Sunday, October 11, 2026. Plan starts Monday, August 3, 2026.
-// Each day: { type, miles, label, note?, reps? }
+// Each day: { type, miles, label, ... }
 // type drives which pace zone is shown: easy | recovery | long | tempo | intervals | shakeout | race | rest | xt
-// `tempoMiles` / `reps` describe the quality portion of a workout.
 
 export const RACE_DATE = "2026-10-11";
 export const PLAN_START = "2026-08-03";
@@ -17,7 +16,7 @@ export const PLAN = [
     week: 1, dates: "Aug 3–9", phase: "Base", focus: "Ease in, find your rhythm",
     days: {
       Mon: rest,
-      Tue: { type: "easy", miles: 4, label: "Easy 4 + strides", strides: 4 },
+      Tue: { type: "easy", miles: 4, label: "Easy 4 + strides" },
       Wed: { type: "tempo", miles: 5, tempoMiles: 3, label: "Tempo 5 (3 @ threshold)" },
       Thu: { type: "easy", miles: 4, label: "Easy 4" },
       Fri: xt,
@@ -29,7 +28,7 @@ export const PLAN = [
     week: 2, dates: "Aug 10–16", phase: "Base", focus: "Build the base",
     days: {
       Mon: rest,
-      Tue: { type: "easy", miles: 5, label: "Easy 5 + strides", strides: 4 },
+      Tue: { type: "easy", miles: 5, label: "Easy 5 + strides" },
       Wed: { type: "tempo", miles: 6, tempoMiles: 4, label: "Tempo 6 (4 @ threshold)" },
       Thu: { type: "easy", miles: 4, label: "Easy 4" },
       Fri: xt,
@@ -65,7 +64,7 @@ export const PLAN = [
     week: 5, dates: "Aug 31–Sep 6", phase: "Build", focus: "Push the long run",
     days: {
       Mon: rest,
-      Tue: { type: "easy", miles: 6, label: "Easy 6 + strides", strides: 5 },
+      Tue: { type: "easy", miles: 6, label: "Easy 6 + strides" },
       Wed: { type: "tempo", miles: 7, tempoMiles: 5, label: "Tempo 7 (5 @ threshold)" },
       Thu: { type: "easy", miles: 5, label: "Easy 5" },
       Fri: xt,
@@ -89,7 +88,7 @@ export const PLAN = [
     week: 7, dates: "Sep 14–20", phase: "Peak", focus: "Peak endurance",
     days: {
       Mon: rest,
-      Tue: { type: "easy", miles: 6, label: "Easy 6 + strides", strides: 5 },
+      Tue: { type: "easy", miles: 6, label: "Easy 6 + strides" },
       Wed: { type: "tempo", miles: 8, tempoMiles: 6, label: "Tempo 8 (6 @ threshold)" },
       Thu: { type: "easy", miles: 5, label: "Easy 5" },
       Fri: xt,
@@ -113,7 +112,7 @@ export const PLAN = [
     week: 9, dates: "Sep 28–Oct 4", phase: "Taper", focus: "Taper — trim volume, keep sharp",
     days: {
       Mon: rest,
-      Tue: { type: "easy", miles: 5, label: "Easy 5 + strides", strides: 4 },
+      Tue: { type: "easy", miles: 5, label: "Easy 5 + strides" },
       Wed: { type: "tempo", miles: 6, tempoMiles: 4, label: "Tempo 6 (4 @ threshold)" },
       Thu: { type: "easy", miles: 4, label: "Easy 4" },
       Fri: xt,
@@ -126,7 +125,7 @@ export const PLAN = [
     days: {
       Mon: rest,
       Tue: { type: "easy", miles: 4, label: "Easy 4" },
-      Wed: { type: "easy", miles: 3, label: "Easy 3 + strides", strides: 4 },
+      Wed: { type: "easy", miles: 3, label: "Easy 3 + strides" },
       Thu: rest,
       Fri: { type: "shakeout", miles: 2, label: "Shakeout 2" },
       Sat: rest,
@@ -139,12 +138,12 @@ export function weeklyMiles(week) {
   return Object.values(week.days).reduce((s, d) => s + (d.miles || 0), 0);
 }
 
-// Phase → accent color used across the UI
+// Phase → accent color (ocean palette, no green).
 export const PHASE_COLOR = {
-  Base: "var(--phase-base)",
-  Build: "var(--phase-build)",
-  Cutback: "var(--phase-cutback)",
-  Peak: "var(--phase-peak)",
-  Taper: "var(--phase-taper)",
-  "Race week": "var(--phase-race)",
+  Base: "#2f80ed",
+  Build: "#2f80ed",
+  Cutback: "#f4b740",
+  Peak: "#ef6c4d",
+  Taper: "#f4b740",
+  "Race week": "#ef6c4d",
 };

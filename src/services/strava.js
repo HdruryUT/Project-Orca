@@ -1,13 +1,12 @@
 // Strava integration.
 //
 // For a personal, local app the simplest path is a short-lived **access token** that you
-// generate from your own Strava API application page. Paste it into the Settings tab.
-// (Full OAuth needs a client secret + redirect server, which a static local app can't hold
-//  safely — see README for how to set that up later.)
+// generate from your own Strava API application page. Paste it into the Paces tab.
+// (Full OAuth needs a client secret + redirect server — see README for how to add that later.)
 //
-// This module: fetches recent running activities, then picks the single run that best
-// represents your CURRENT fitness (the one predicting the fastest marathon via Riegel),
-// and returns it as an `effort` the pace engine can use.
+// This module fetches recent running activities, picks the run that best represents your
+// CURRENT fitness (the one predicting the fastest marathon via Riegel), and returns it as
+// an `effort` the pace engine can use.
 
 import { riegelPredict } from "../utils/paces.js";
 
@@ -15,7 +14,6 @@ const API = "https://www.strava.com/api/v3";
 const MARATHON_MI = 26.2188;
 const METERS_PER_MILE = 1609.344;
 
-// Fetch recent activities with a bearer token. Returns raw Strava activity objects.
 export async function fetchActivities(token, perPage = 60) {
   const res = await fetch(`${API}/athlete/activities?per_page=${perPage}`, {
     headers: { Authorization: `Bearer ${token}` },
@@ -25,7 +23,6 @@ export async function fetchActivities(token, perPage = 60) {
   return res.json();
 }
 
-// Keep runs only, from roughly the last `weeks` weeks, that are a meaningful distance.
 export function filterRecentRuns(activities, weeks = 6, minMiles = 3) {
   const cutoff = Date.now() - weeks * 7 * 24 * 3600 * 1000;
   return (activities || [])
@@ -41,8 +38,6 @@ export function filterRecentRuns(activities, weeks = 6, minMiles = 3) {
     .filter((a) => a.miles >= minMiles && a.seconds > 0);
 }
 
-// From a set of runs, choose the one predicting the fastest marathon — that run best
-// reflects current fitness. Returns an `effort` object, or null.
 export function bestEffort(runs) {
   if (!runs || !runs.length) return null;
   let best = null;
@@ -59,7 +54,6 @@ export function bestEffort(runs) {
     : null;
 }
 
-// One call: token -> effort (or throws).
 export async function effortFromStrava(token) {
   const activities = await fetchActivities(token);
   const runs = filterRecentRuns(activities);
@@ -68,8 +62,6 @@ export async function effortFromStrava(token) {
 }
 
 // ---- Demo mode -------------------------------------------------------------
-// Sample runs so the app is fully functional before you connect Strava.
-// Roughly a runner with a ~9:10/mi easy pace and a solid recent 10-miler.
 export const DEMO_RUNS = [
   { id: 1, name: "Easy morning loop", date: "2026-07-28", miles: 5.2, seconds: 5.2 * 555 },
   { id: 2, name: "Tempo Tuesday", date: "2026-07-24", miles: 6.0, seconds: 6.0 * 505 },

@@ -2,7 +2,6 @@
 // Uses Riegel's endurance model to predict race times across distances, then derives
 // training zones from those predictions. All paces are in seconds per mile internally.
 
-const MILE = 1609.344; // meters
 const MARATHON_MI = 26.2188;
 const HALF_MI = 13.1094;
 const FIVEK_MI = 3.10686;
@@ -30,26 +29,23 @@ export function fmtDuration(sec) {
   return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-// A pace range as "m:ss–m:ss / mi".
 function range(lo, hi) {
   return `${fmtPace(lo)}–${fmtPace(hi)}`;
 }
 
-// Core: given a representative effort {miles, seconds}, compute all zones + a
-// predicted marathon time. Zones are offsets from predicted marathon pace (MP),
-// tuned to standard endurance-training guidance.
+// Given a representative effort {miles, seconds}, compute all zones + predicted marathon.
 export function computeZones(effort) {
   if (!effort || !effort.miles || !effort.seconds) return null;
   const { miles, seconds } = effort;
 
   const maraTime = riegelPredict(miles, seconds, MARATHON_MI);
-  const mp = maraTime / MARATHON_MI; // marathon pace, s/mi
+  const mp = maraTime / MARATHON_MI;
 
   const halfTime = riegelPredict(miles, seconds, HALF_MI);
-  const hp = halfTime / HALF_MI; // half pace ≈ threshold-ish
+  const hp = halfTime / HALF_MI;
 
   const fiveKTime = riegelPredict(miles, seconds, FIVEK_MI);
-  const fp = fiveKTime / FIVEK_MI; // 5K pace ≈ interval effort
+  const fp = fiveKTime / FIVEK_MI;
 
   const zones = {
     easy: { label: "Easy", lo: mp + 60, hi: mp + 90 },
@@ -70,7 +66,6 @@ export function computeZones(effort) {
   };
 }
 
-// Human-readable pace string for a given zone key.
 export function zonePace(zones, key) {
   if (!zones) return null;
   const z = zones.zones[key];
@@ -78,7 +73,6 @@ export function zonePace(zones, key) {
   return { label: z.label, text: range(z.lo, z.hi), lo: z.lo, hi: z.hi };
 }
 
-// Map a workout to the zone key whose pace should be shown.
 export function zoneForWorkout(type) {
   switch (type) {
     case "easy": return "easy";
@@ -92,7 +86,6 @@ export function zoneForWorkout(type) {
   }
 }
 
-// Convert a manual race entry (distance in miles + "h:mm:ss" or "mm:ss") to an effort.
 export function effortFromManual(miles, timeStr, source = "manual") {
   const parts = String(timeStr).split(":").map(Number);
   if (parts.some(isNaN) || !miles) return null;

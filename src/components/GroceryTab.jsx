@@ -7,7 +7,6 @@ export default function GroceryTab() {
   const doneCount = allItems.filter((k) => checked[k]).length;
 
   const toggle = (key) => setChecked((c) => ({ ...c, [key]: !c[key] }));
-  const clearAll = () => setChecked({});
 
   return (
     <div className="card">
@@ -15,7 +14,7 @@ export default function GroceryTab() {
       <div className="sub">A runner's staple shop, organized by aisle. Checks are saved on this device.</div>
       <div className="progress">
         <b>{doneCount}</b> / {allItems.length} in the cart
-        <button className="btn ghost small" style={{ marginLeft: 12 }} onClick={clearAll}>
+        <button className="btn ghost small" style={{ marginLeft: 12 }} onClick={() => setChecked({})}>
           Clear all
         </button>
       </div>

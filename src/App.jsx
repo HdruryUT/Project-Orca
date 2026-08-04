@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RACE_DATE } from "./data/plan.js";
 import { computeZones } from "./utils/paces.js";
 import { useLocalStorage } from "./hooks/useLocalStorage.js";
+import OrcaLogo from "./components/OrcaLogo.jsx";
+import DashboardTab from "./components/DashboardTab.jsx";
 import ScheduleTab from "./components/ScheduleTab.jsx";
 import EatingTab from "./components/EatingTab.jsx";
 import GroceryTab from "./components/GroceryTab.jsx";
@@ -10,6 +12,7 @@ import GearTab from "./components/GearTab.jsx";
 import SettingsTab from "./components/SettingsTab.jsx";
 
 const TABS = [
+  { id: "dashboard", label: "🏠 Dashboard" },
   { id: "schedule", label: "🏃 Schedule" },
   { id: "eating", label: "🥗 Eating" },
   { id: "grocery", label: "🛒 Grocery" },
@@ -21,38 +24,44 @@ const TABS = [
 function daysUntilRace() {
   const race = new Date(RACE_DATE + "T00:00:00");
   const now = new Date();
-  return Math.max(0, Math.ceil((race - now) / (24 * 3600 * 1000)));
+  now.setHours(0, 0, 0, 0);
+  return Math.max(0, Math.ceil((race - now) / 86400000));
 }
 
 export default function App() {
-  const [tab, setTab] = useState("schedule");
+  const [tab, setTab] = useState("dashboard");
   const [effort, setEffort] = useLocalStorage("orca.effort", null);
+  const [theme, setTheme] = useLocalStorage("orca.theme", "light");
   const zones = computeZones(effort);
   const days = daysUntilRace();
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
 
   return (
     <div className="app">
       <header className="header">
-        <div className="brand">
-          <span className="brand-mark">🐋</span>
-          <div className="brand-text">
-            <h1>Project Orca</h1>
-            <span className="brand-sub">Marathon Training Dashboard</span>
+        <div className="header-top">
+          <div className="brand">
+            <OrcaLogo size={46} />
+            <div>
+              <h1>Project Orca</h1>
+              <div className="tagline">Marathon training companion</div>
+            </div>
           </div>
+          <button
+            className="theme-toggle"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            title="Toggle dark mode"
+          >
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
         </div>
-        <div className="stat-row">
-          <div className="stat">
-            <span className="stat-label">Race Day</span>
-            <span className="stat-value">Sun, Oct 11, 2026</span>
-          </div>
-          <div className="stat">
-            <span className="stat-label">Countdown</span>
-            <span className="stat-value countdown">{days} days to go</span>
-          </div>
-          <div className="stat">
-            <span className="stat-label">Paces</span>
-            <span className="stat-value">{zones ? "Personalized ✓" : "Not set"}</span>
-          </div>
+        <div className="meta">
+          <span>🗓 <b>Sun, Oct 11, 2026</b></span>
+          <span className="countdown">{days} days to go</span>
+          <span>{zones ? "Paces personalized ✓" : "Paces not set"}</span>
         </div>
       </header>
 
@@ -68,6 +77,7 @@ export default function App() {
         ))}
       </nav>
 
+      {tab === "dashboard" && <DashboardTab zones={zones} goToTab={setTab} />}
       {tab === "schedule" && <ScheduleTab zones={zones} />}
       {tab === "eating" && <EatingTab />}
       {tab === "grocery" && <GroceryTab />}

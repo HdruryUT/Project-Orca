@@ -21,8 +21,8 @@ export default function RaceDayTab() {
         </div>
       ))}
       <div className="callout" style={{ marginTop: 16 }}>
-        Rehearse it: practice this exact fueling — breakfast, gels, drink — on your long runs so race day has zero
-        surprises. Your gut can be trained just like your legs.
+        Rehearse it: practice this exact fueling — pre-run snack, gels, drink — on your long runs so race day has
+        zero surprises. Your gut can be trained just like your legs.
       </div>
     </div>
   );

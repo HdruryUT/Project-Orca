@@ -64,7 +64,6 @@ export default function SettingsTab({ effort, onSetEffort }) {
               <b>{fmtPace(zones.marathonPace)}/mi</b>
               {effort?.source === "strava" && effort?.name ? ` · from Strava run "${effort.name}"` : ""}
               {effort?.source === "manual" ? ` · from your entered ${effort.miles.toFixed(1)}-mi effort` : ""}
-              {effort?.source === "strava" && !effort?.name ? " · from Strava" : ""}
             </div>
             <div className="zones-grid">
               {ZONE_ORDER.map((k) => {

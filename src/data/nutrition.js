@@ -2,46 +2,46 @@
 
 export const EATING_SCHEDULE = {
   intro:
-    "Target roughly 2.5–3.5 g carbs per lb body weight on hard/long days, ~0.7 g protein per lb daily, and steady hydration. Times are examples — anchor them to your own schedule and run time.",
+    "Built around your ~6:00 PM run. The goal: eat most of your carbs earlier in the day so you're fueled by evening, keep the pre-run snack light and easy to digest, then refuel fast afterward. Target ~2.5–3.5 g carbs per lb on long days, ~0.7 g protein per lb daily.",
   rows: [
     {
-      when: "Wake / pre-run",
-      normal: "Small carb snack: banana or toast with honey + water. Coffee if you like.",
-      long: "Toast + honey or a small bowl of oatmeal + banana, 45–60 min before. Sip water/electrolytes.",
+      when: "Breakfast (~7–8 AM)",
+      normal: "Balanced start: oats with berries + Greek yogurt + nuts, OR eggs with whole-grain toast + fruit.",
+      long: "Same, a bit bigger. Extra carbs today — add fruit or a second slice of toast. Start hydrating early.",
     },
     {
-      when: "Breakfast / post-run",
-      normal: "Oats with berries + Greek yogurt + nuts, OR eggs with whole-grain toast + fruit.",
-      long: "Recovery within 30–45 min: chocolate milk or a smoothie first, then a full carb + protein breakfast.",
+      when: "Lunch (~12–1 PM)",
+      normal: "Your main fuel for tonight's run: carb-forward grain bowl — rice/quinoa + chicken or beans + veg + olive oil.",
+      long: "Load the carbs here: larger pasta/rice bowl + lean protein + veg. This meal fills the tank for tonight.",
     },
     {
-      when: "Mid-morning snack",
-      normal: "Apple + a handful of almonds, or Greek yogurt.",
-      long: "Extra carbs today: yogurt + granola + fruit. Keep refueling.",
+      when: "Pre-run snack (~4:30 PM)",
+      normal: "60–90 min out: easy-to-digest carbs, low fiber/fat — banana, toast + honey, or an energy bar. Water + electrolytes.",
+      long: "Same, slightly more (e.g. banana + a few dates). Top off ~15 min before with a gel or chews for runs over ~90 min.",
     },
     {
-      when: "Lunch",
-      normal: "Grain bowl: rice or quinoa + chicken/beans + veg + olive oil. A whole-grain wrap works too.",
-      long: "Same, slightly larger. Prioritize carbs + easy protein. Add a side of fruit.",
+      when: "During the run (~6 PM)",
+      normal: "Runs under ~60 min: water is enough. Sip electrolytes if it's warm.",
+      long: "Fuel like race day: 30–60 g carbs/hr (a gel every 30–45 min) + steady fluids. This is your rehearsal.",
     },
     {
-      when: "Afternoon snack",
-      normal: "Whole-grain crackers + hummus, or a banana with peanut butter.",
-      long: "Trail mix, dates, or a rice cake with nut butter. Keep glycogen topped up.",
+      when: "Post-run dinner (~7:15 PM)",
+      normal: "Within 30–45 min: recovery carbs + protein — salmon or lean protein + sweet potato/pasta + vegetables.",
+      long: "Carb-forward recovery: pasta or rice bowl + protein + veg. Chocolate milk or a smoothie first if dinner's delayed.",
     },
     {
-      when: "Dinner",
-      normal: "Salmon or lean protein + sweet potato/pasta + vegetables + olive oil.",
-      long: "Carb-forward: pasta or rice bowl + protein + veg. Not too heavy — you refueled all day.",
+      when: "Evening (~9 PM)",
+      normal: "Light if hungry: Greek yogurt, cottage cheese, or fruit. Keep sipping water.",
+      long: "A little extra protein (Greek yogurt / cottage cheese) supports overnight repair after a hard effort.",
     },
     {
       when: "Hydration (all day)",
-      normal: "Half your body weight (lb) in oz of water; more on hot days. Electrolytes after sweaty runs.",
-      long: "Higher intake. Electrolyte drink during and after the long run. Aim for pale-straw urine.",
+      normal: "Half your body weight (lb) in oz of water; more on hot days. Pre-load fluids in the afternoon before an evening run.",
+      long: "Higher intake, front-loaded through the day. Electrolyte drink during and after. Aim for pale-straw urine.",
     },
   ],
   principles:
-    "Build meals around whole-grain carbs, lean protein at every meal for repair, colorful produce for recovery, and healthy fats in moderation. Limit alcohol and heavily processed food, especially the day before a long run. Iron matters for endurance — include lean red meat, beans, and spinach, and pair plant iron with vitamin C.",
+    "Because you run in the evening, breakfast and especially lunch are your fueling meals — don't skimp on daytime carbs. Keep the late-afternoon snack light and familiar so nothing sits heavy at 6 PM. Build meals around whole-grain carbs, lean protein for repair, colorful produce, and healthy fats in moderation. Limit alcohol and heavy/greasy food the day before a long run. Iron matters for endurance — include lean red meat, beans, and spinach, and pair plant iron with vitamin C.",
 };
 
 export const GROCERY = [

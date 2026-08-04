@@ -9,9 +9,9 @@ export default function EatingTab() {
       <table className="grid">
         <thead>
           <tr>
-            <th style={{ width: "18%" }}>When</th>
-            <th>Normal training day</th>
-            <th>Long-run day (Sat)</th>
+            <th style={{ width: "20%" }}>When</th>
+            <th>Normal run day (~6 PM)</th>
+            <th>Long-run day</th>
           </tr>
         </thead>
         <tbody>
