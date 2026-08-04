@@ -31,8 +31,8 @@ export default function ScheduleTab({ zones }) {
             : " Connect Strava or enter a recent run in Settings to see personalized target paces."}
         </div>
         <div className="legend">
-          <span><span className="dot" style={{ background: "var(--teal)" }} />Long run</span>
-          <span><span className="dot" style={{ background: "var(--orange)" }} />Race</span>
+          <span><span className="dot" style={{ background: "var(--primary)" }} />Long run</span>
+          <span><span className="dot" style={{ background: "var(--danger)" }} />Race</span>
           <span>Strides = 4–6 × 20-sec smooth pickups · XT = bike/swim/elliptical</span>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function ScheduleTab({ zones }) {
           <div className="week-head">
             <span className="week-badge">Week {wk.week}</span>
             <span className="week-dates">{wk.dates}</span>
-            <span className="phase-pill" style={{ background: PHASE_COLOR[wk.phase] || "var(--teal)" }}>
+            <span className="phase-pill" style={{ background: PHASE_COLOR[wk.phase] || "var(--primary)" }}>
               {wk.phase}
             </span>
             <span className="week-focus">{wk.focus}</span>
