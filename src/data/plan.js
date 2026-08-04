@@ -141,10 +141,10 @@ export function weeklyMiles(week) {
 
 // Phase → accent color used across the UI
 export const PHASE_COLOR = {
-  Base: "#2A9D8F",
-  Build: "#2A9D8F",
-  Cutback: "#E9C46A",
-  Peak: "#E76F51",
-  Taper: "#E9C46A",
-  "Race week": "#E76F51",
+  Base: "var(--phase-base)",
+  Build: "var(--phase-build)",
+  Cutback: "var(--phase-cutback)",
+  Peak: "var(--phase-peak)",
+  Taper: "var(--phase-taper)",
+  "Race week": "var(--phase-race)",
 };
