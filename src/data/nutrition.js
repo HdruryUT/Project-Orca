@@ -59,15 +59,15 @@ export const GROCERY = [
 
 export const RACE_DAY = [
   {
-    section: "Carb-load — Thu Oct 8 → Sat Oct 10",
+    section: "Carb-load — Wed Oct 7 → Fri Oct 9",
     rows: [
-      { when: "Thu & Fri", what: "Gradually shift meals toward carbs (~3–4 g/lb): rice, pasta, potatoes, bread, fruit. Keep protein moderate, fat lower. Don't overeat — you're topping off glycogen, not stuffing." },
-      { when: "Sat (day before)", what: "Carb-forward, familiar, low-fiber foods. Bigger lunch, moderate early dinner (pasta/rice + light protein). Hydrate with electrolytes all day. Avoid new/spicy/greasy food and alcohol." },
-      { when: "Sat evening", what: "Lay out all gear (Gear tab). Set two alarms. Light easy day — legs up, relax." },
+      { when: "Wed & Thu", what: "Gradually shift meals toward carbs (~3–4 g/lb): rice, pasta, potatoes, bread, fruit. Keep protein moderate, fat lower. Don't overeat — you're topping off glycogen, not stuffing." },
+      { when: "Fri (day before)", what: "Carb-forward, familiar, low-fiber foods. Bigger lunch, moderate early dinner (pasta/rice + light protein). Hydrate with electrolytes all day. Avoid new/spicy/greasy food and alcohol." },
+      { when: "Fri evening", what: "Lay out all gear (Gear tab). Set two alarms. Light easy day — legs up, relax." },
     ],
   },
   {
-    section: "Race morning — Sun Oct 11",
+    section: "Race morning — Sat Oct 10",
     rows: [
       { when: "3–3.5 hrs before", what: "Familiar breakfast, ~600–800 cal, carb-heavy & low fiber: oatmeal + banana + honey, or bagel + peanut butter + banana. Coffee if that's your routine. Same breakfast you rehearsed before long runs." },
       { when: "Up to the start", what: "Sip water/electrolytes. Optional small top-off ~15 min before: half a banana, a few chews, or a gel. Use the bathroom. Nothing new." },
@@ -91,6 +91,38 @@ export const RACE_DAY = [
     ],
   },
 ];
+
+export const RACE_PACING = {
+  intro:
+    "Here's the 7:20/mile target applied to each section — good news is the course profile is well-suited to a " +
+    "slightly negative-ish split around a big midrace slowdown:",
+  sections: [
+    {
+      range: "Miles 1–11",
+      terrain: "net downhill, ~1000 ft loss",
+      note: "Hold 7:05–7:15/mile. Slightly faster than goal pace is fine here since gravity's helping, but don't dip into 6:40s chasing the downhill — you'll pay for it on the climb.",
+    },
+    {
+      range: "Miles 11–17",
+      terrain: "sustained climb, ~900 ft gain",
+      note: "Plan on 7:50–8:15/mile, maybe touching 8:20 on the steepest stretch. That's 30–55 sec/mile slower than goal — expected and fine. Trying to hold 7:20 here is the classic way to blow up this course.",
+    },
+    {
+      range: "Hogsback / exposed rock spine",
+      terrain: "within the climb stretch",
+      note: "No pace change beyond the climb adjustment above — just keep effort smooth and controlled rather than pushing on the exposed footing.",
+    },
+    {
+      range: "Miles 17–26.2",
+      terrain: "net downhill, rolling",
+      note: "Target 7:10–7:20/mile. Legs will be tired from the climb, so this isn't a place to hammer sub-7:00s to \"make up time\" — just hold goal pace or slightly under.",
+    },
+  ],
+  summary:
+    "Rough math: if you run the first 11 at ~7:10, the climb (6 miles) at ~8:00, and the final 9.2 at ~7:15, you " +
+    "land right around 3:12–3:13 total — close to a flat 7:20 average, just distributed to match the terrain " +
+    "instead of forcing even splits.",
+};
 
 export const GEAR = [
   {

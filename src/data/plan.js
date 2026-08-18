@@ -1,9 +1,9 @@
 // 10-week marathon training plan — Project Orca
-// Race day: Sunday, October 11, 2026. Plan starts Monday, August 3, 2026.
+// Race day: Saturday, October 10, 2026. Plan starts Monday, August 3, 2026.
 // Each day: { type, miles, label, ... }
 // type drives which pace zone is shown: easy | recovery | long | tempo | intervals | shakeout | race | rest | xt
 
-export const RACE_DATE = "2026-10-11";
+export const RACE_DATE = "2026-10-10";
 export const PLAN_START = "2026-08-03";
 
 export const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -126,10 +126,10 @@ export const PLAN = [
       Mon: rest,
       Tue: { type: "easy", miles: 4, label: "Easy 4" },
       Wed: { type: "easy", miles: 3, label: "Easy 3 + strides" },
-      Thu: rest,
-      Fri: { type: "shakeout", miles: 2, label: "Shakeout 2" },
-      Sat: rest,
-      Sun: { type: "race", miles: 26.2, label: "🏁 RACE — 26.2" },
+      Thu: { type: "shakeout", miles: 2, label: "Shakeout 2" },
+      Fri: rest,
+      Sat: { type: "race", miles: 26.2, label: "🏁 RACE — 26.2" },
+      Sun: { type: "rest", miles: 0, label: "Post-race recovery" },
     },
   },
 ];

@@ -1,6 +1,6 @@
 # Project Orca — Marathon Training App
 
-A local React app for your October 11, 2026 marathon. Tabs: **Dashboard, Schedule, Eating,
+A local React app for your October 10, 2026 marathon. Tabs: **Dashboard, Schedule, Eating,
 Grocery, Race Day, Gear,** and **Paces & Strava**. It personalizes every workout's target
 pace from a recent run — pulled from Strava or entered by hand — and includes a light/dark
 theme and an at-a-glance dashboard.
@@ -36,38 +36,64 @@ Open **Paces & Strava**:
 - **Try with demo data** — instant sample paces.
 - **Enter a recent run** — distance + time; predicts your marathon (Riegel) and derives
   easy / long / tempo / interval / goal-marathon paces.
-- **Connect Strava** — paste an access token; the app uses your fittest recent run.
+- **Connect Strava** — one-time authorization, then the app pulls your fittest recent run
+  itself, no tokens. Requires the app to be deployed (see below). Locally, before you've
+  deployed, use the manual-token fallback in the same card instead.
 
-### Strava access token (personal use)
+### Connect Strava (one-time setup, after deploying)
+
+Auto-refreshing Strava access without you re-pasting a token every few hours needs a
+server to hold the app's **client secret** — a static site can't do that safely. This repo
+ships that as a small serverless backend under `api/strava/*` (Vercel functions), already
+wired up. To turn it on:
+
+1. **Register a Strava API application** at <https://www.strava.com/settings/api>.
+   - **Authorization Callback Domain**: your Vercel domain with no `https://` or path —
+     e.g. `project-orca.vercel.app`, or your custom domain if you set one.
+   - Note the **Client ID** and **Client Secret** it gives you.
+2. **Add environment variables in Vercel** — Project → Settings → Environment Variables:
+   - `STRAVA_CLIENT_ID` — the Client ID from step 1.
+   - `STRAVA_CLIENT_SECRET` — the Client Secret from step 1. Never commit this or prefix
+     it with `VITE_` (that would ship it to the browser).
+3. **Redeploy** (env var changes need a fresh deploy to take effect).
+4. In the app, **Paces & Strava → Connect Strava**. You'll approve access on Strava's site
+   once; after that, "Sync latest run & set paces" always fetches fresh data — no more
+   tokens.
+
+Testing locally with the backend live requires the Vercel CLI (`vercel dev`, after
+`vercel link` and `vercel env pull`) — plain `npm run dev` doesn't run the `/api` functions,
+which is exactly when the manual-token fallback in the Connect Strava card is useful.
+
+### Strava access token (manual fallback, works without deploying)
 
 1. <https://www.strava.com/settings/api> → create an app (callback domain `localhost`).
-2. Copy **Your Access Token** into the Paces tab.
-3. Tokens expire after a few hours; regenerate when needed. Automatic refresh needs the
-   small backend described below.
-
-### Later: full one-click OAuth
-
-A static site can't safely hold your Strava **client secret**, so auto-refreshing tokens
-needs a tiny serverless endpoint. Only `src/services/strava.js` needs to change — point
-`fetchActivities` at your backend and the rest of the app is unaffected. On Vercel this is
-an `/api` function in the same project.
+2. Copy **Your Access Token** into the token field in the Connect Strava card.
+3. Tokens expire after a few hours; regenerate and re-paste when needed.
 
 ---
 
 ## Project structure
 
 ```
+api/                      Vercel serverless functions (only live once deployed)
+└─ strava/
+   ├─ login.js            redirect to Strava's OAuth consent screen
+   ├─ callback.js         exchange the auth code, store a refresh token (httpOnly cookie)
+   ├─ activities.js       refresh the access token, proxy "list activities"
+   ├─ status.js           tells the frontend whether Strava is connected
+   └─ disconnect.js       clears the stored refresh token
+
 src/
 ├─ main.jsx
 ├─ App.jsx                tab shell, dark-mode toggle, countdown, pace state
 ├─ styles.css             ocean theme + dark mode (CSS variables)
 ├─ data/
 │  ├─ plan.js             the 10-week schedule + phase colors
-│  └─ nutrition.js        eating schedule (evening runner), grocery, race-day, gear
+│  └─ nutrition.js        eating schedule (evening runner), grocery, race-day, gear, race pacing plan
 ├─ utils/
 │  ├─ paces.js            Riegel predictor + training-pace zones
 │  └─ schedule.js         "where am I in the plan today" helper
-├─ services/strava.js     Strava fetch + demo data
+├─ services/strava.js     Strava fetch (manual token + connect-once backend) + demo data
 ├─ hooks/useLocalStorage.js
 └─ components/
    ├─ OrcaLogo.jsx        inline SVG orca mark

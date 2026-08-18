@@ -1,5 +1,7 @@
-import { useState } from "react";
-import { effortFromStrava, demoEffort } from "../services/strava.js";
+import { useState, useEffect } from "react";
+import {
+  effortFromStrava, demoEffort, stravaStatus, effortFromStravaBackend, disconnectStrava,
+} from "../services/strava.js";
 import {
   computeZones, zonePace, fmtPace, fmtDuration,
   effortFromManual, DISTANCE_PRESETS,
@@ -11,12 +13,17 @@ export default function SettingsTab({ effort, onSetEffort }) {
   const [token, setToken] = useState("");
   const [status, setStatus] = useState(null);
   const [busy, setBusy] = useState(false);
+  const [connected, setConnected] = useState(null); // null = still checking
 
   const [presetIdx, setPresetIdx] = useState(3); // half marathon
   const [customMiles, setCustomMiles] = useState("");
   const [timeStr, setTimeStr] = useState("");
 
   const zones = computeZones(effort);
+
+  useEffect(() => {
+    stravaStatus().then((s) => setConnected(s.connected));
+  }, []);
 
   async function connectStrava() {
     if (!token.trim()) { setStatus({ type: "warn", msg: "Paste a Strava access token first." }); return; }
@@ -30,6 +37,25 @@ export default function SettingsTab({ effort, onSetEffort }) {
     } finally {
       setBusy(false);
     }
+  }
+
+  async function syncStrava() {
+    setBusy(true); setStatus(null);
+    try {
+      const { effort: e } = await effortFromStravaBackend();
+      onSetEffort(e);
+      setStatus({ type: "info", msg: `Synced. Paces set from your run "${e.name}" (${e.miles.toFixed(1)} mi).` });
+    } catch (err) {
+      setStatus({ type: "warn", msg: err.message });
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function handleDisconnect() {
+    await disconnectStrava();
+    setConnected(false);
+    setStatus(null);
   }
 
   function loadDemo() {
@@ -88,27 +114,49 @@ export default function SettingsTab({ effort, onSetEffort }) {
         <div className="sub">
           The app picks your fittest recent run (last 6 weeks) and recalculates every training pace from it.
         </div>
-        <div className="banner strava">
-          For a personal local app, paste a Strava <b>access token</b> from your API application page
-          (Strava → Settings → API). Full one-click OAuth needs a small server — see the README.
-        </div>
-        <div className="field">
-          <label>Strava access token</label>
-          <input
-            className="input"
-            type="password"
-            placeholder="Paste token…"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-          />
-          <div className="hint">Stored only in this browser, used to call the Strava API directly.</div>
-        </div>
-        <div className="btn-row">
-          <button className="btn" onClick={connectStrava} disabled={busy}>
-            {busy ? "Connecting…" : "Connect & set paces"}
-          </button>
-          <button className="btn ghost" onClick={loadDemo}>Try with demo data</button>
-        </div>
+
+        {connected ? (
+          <>
+            <div className="banner info">Strava connected ✓ — no token needed, just sync when you want fresh data.</div>
+            <div className="btn-row">
+              <button className="btn" onClick={syncStrava} disabled={busy}>
+                {busy ? "Syncing…" : "Sync latest run & set paces"}
+              </button>
+              <button className="btn ghost" onClick={loadDemo}>Try with demo data</button>
+              <button className="btn ghost small" onClick={handleDisconnect}>Disconnect</button>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="banner strava">
+              Click Connect to authorize once — the app then refreshes your Strava data itself, no token pasting.
+              This needs the app's small serverless backend, so it only works once deployed (see the README) —
+              not under plain <code>npm run dev</code>.
+            </div>
+            <div className="btn-row">
+              <a className="btn" href="/api/strava/login">Connect Strava</a>
+              <button className="btn ghost" onClick={loadDemo}>Try with demo data</button>
+            </div>
+
+            <div className="field" style={{ marginTop: 16 }}>
+              <label>Or paste a token manually</label>
+              <input
+                className="input"
+                type="password"
+                placeholder="Paste token…"
+                value={token}
+                onChange={(e) => setToken(e.target.value)}
+              />
+              <div className="hint">
+                Works right now in local dev, no deploy needed — but the token expires in ~6 hours, so you'll
+                re-paste a fresh one each time. Stored only in this browser.
+              </div>
+            </div>
+            <button className="btn ghost" onClick={connectStrava} disabled={busy}>
+              {busy ? "Connecting…" : "Use this token"}
+            </button>
+          </>
+        )}
       </div>
 
       <div className="card">

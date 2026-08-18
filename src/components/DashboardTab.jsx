@@ -31,7 +31,7 @@ export default function DashboardTab({ zones, goToTab }) {
         <div className="stat accent-orange">
           <div className="lbl">Race day</div>
           <div className="big">{days}</div>
-          <div className="lbl">days to go · Oct 11</div>
+          <div className="lbl">days to go · Oct 10</div>
         </div>
         <div className="stat">
           <div className="lbl">Training week</div>

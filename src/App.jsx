@@ -29,7 +29,9 @@ function daysUntilRace() {
 }
 
 export default function App() {
-  const [tab, setTab] = useState("dashboard");
+  const [tab, setTab] = useState(() =>
+    new URLSearchParams(window.location.search).has("strava") ? "paces" : "dashboard"
+  );
   const [effort, setEffort] = useLocalStorage("orca.effort", null);
   const [theme, setTheme] = useLocalStorage("orca.theme", "light");
   const zones = computeZones(effort);
@@ -38,6 +40,13 @@ export default function App() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
+
+  useEffect(() => {
+    // Land on Paces & Strava after the /api/strava/callback redirect, and clean the URL.
+    if (new URLSearchParams(window.location.search).has("strava")) {
+      window.history.replaceState({}, "", window.location.pathname);
+    }
+  }, []);
 
   return (
     <div className="app">
@@ -59,7 +68,7 @@ export default function App() {
           </button>
         </div>
         <div className="meta">
-          <span>🗓 <b>Sun, Oct 11, 2026</b></span>
+          <span>🗓 <b>Sat, Oct 10, 2026</b></span>
           <span className="countdown">{days} days to go</span>
           <span>{zones ? "Paces personalized ✓" : "Paces not set"}</span>
         </div>

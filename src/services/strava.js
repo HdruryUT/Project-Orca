@@ -61,6 +61,39 @@ export async function effortFromStrava(token) {
   return { effort: bestEffort(runs), runs };
 }
 
+// ---- Connect-once mode (via the /api/strava/* serverless functions) -------
+// No token handling in the browser at all — the backend holds the refresh token
+// and re-authenticates with Strava on every call. Requires this app to be
+// deployed (or run under `vercel dev`) since plain `vite dev` has no /api routes.
+
+export async function stravaStatus() {
+  try {
+    const res = await fetch("/api/strava/status");
+    if (!res.ok) return { connected: false };
+    return await res.json();
+  } catch {
+    return { connected: false };
+  }
+}
+
+export async function fetchActivitiesFromBackend(perPage = 60) {
+  const res = await fetch(`/api/strava/activities?per_page=${perPage}`);
+  if (res.status === 401) throw new Error("Strava isn't connected — click Connect Strava first.");
+  if (!res.ok) throw new Error(`Strava sync failed (${res.status}).`);
+  return res.json();
+}
+
+export async function effortFromStravaBackend() {
+  const activities = await fetchActivitiesFromBackend();
+  const runs = filterRecentRuns(activities);
+  if (!runs.length) throw new Error("No qualifying runs (≥3 mi in the last 6 weeks) found on Strava yet.");
+  return { effort: bestEffort(runs), runs };
+}
+
+export async function disconnectStrava() {
+  await fetch("/api/strava/disconnect", { method: "POST" });
+}
+
 // ---- Demo mode -------------------------------------------------------------
 export const DEMO_RUNS = [
   { id: 1, name: "Easy morning loop", date: "2026-07-28", miles: 5.2, seconds: 5.2 * 555 },
