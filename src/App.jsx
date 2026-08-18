@@ -10,15 +10,16 @@ import GroceryTab from "./components/GroceryTab.jsx";
 import RaceDayTab from "./components/RaceDayTab.jsx";
 import GearTab from "./components/GearTab.jsx";
 import SettingsTab from "./components/SettingsTab.jsx";
+import { IconHome, IconCalendar, IconEating, IconGrocery, IconFlag, IconShirt, IconGauge } from "./components/icons.jsx";
 
 const TABS = [
-  { id: "dashboard", label: "🏠 Dashboard" },
-  { id: "schedule", label: "🏃 Schedule" },
-  { id: "eating", label: "🥗 Eating" },
-  { id: "grocery", label: "🛒 Grocery" },
-  { id: "raceday", label: "🏁 Race Day" },
-  { id: "gear", label: "🎽 Gear" },
-  { id: "paces", label: "⚙️ Paces & Strava" },
+  { id: "dashboard", label: "Dashboard", Icon: IconHome },
+  { id: "schedule", label: "Schedule", Icon: IconCalendar },
+  { id: "eating", label: "Eating", Icon: IconEating },
+  { id: "grocery", label: "Grocery", Icon: IconGrocery },
+  { id: "raceday", label: "Race Day", Icon: IconFlag },
+  { id: "gear", label: "Gear", Icon: IconShirt },
+  { id: "paces", label: "Paces & Strava", Icon: IconGauge },
 ];
 
 function daysUntilRace() {
@@ -81,7 +82,8 @@ export default function App() {
             className={`tab-btn ${tab === t.id ? "active" : ""}`}
             onClick={() => setTab(t.id)}
           >
-            {t.label}
+            <t.Icon size={17} />
+            <span>{t.label}</span>
           </button>
         ))}
       </nav>

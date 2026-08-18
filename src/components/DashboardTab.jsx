@@ -1,6 +1,8 @@
-import { RACE_DATE, DAY_NAMES, PHASE_COLOR, weeklyMiles } from "../data/plan.js";
+import { RACE_DATE, DAY_NAMES, PHASE_COLOR, weeklyMiles, PLAN } from "../data/plan.js";
 import { zoneForWorkout, zonePace, fmtPace, fmtDuration } from "../utils/paces.js";
 import { currentPosition, totalPlannedMiles, milesThroughWeek } from "../utils/schedule.js";
+import { IconEating, IconGrocery, IconFlag, IconShirt } from "./icons.jsx";
+import MileageChart from "./MileageChart.jsx";
 
 function daysUntilRace() {
   const race = new Date(RACE_DATE + "T00:00:00");
@@ -101,6 +103,13 @@ export default function DashboardTab({ zones, goToTab }) {
         </div>
       </div>
 
+      {/* Weekly mileage */}
+      <div className="card">
+        <h2>Training Volume</h2>
+        <div className="sub">Planned miles per week across the plan{state === "during" ? " — this week is highlighted" : ""}.</div>
+        <MileageChart plan={PLAN} activeWeekIndex={state === "during" ? pos.weekIndex : null} />
+      </div>
+
       {/* Progress + paces */}
       <div className="dash-two">
         <div className="card">
@@ -141,10 +150,10 @@ export default function DashboardTab({ zones, goToTab }) {
 
       {/* Quick nav */}
       <div className="quick-nav">
-        <button className="quick" onClick={() => goToTab("eating")}>🥗<span>Eating</span></button>
-        <button className="quick" onClick={() => goToTab("grocery")}>🛒<span>Grocery</span></button>
-        <button className="quick" onClick={() => goToTab("raceday")}>🏁<span>Race Day</span></button>
-        <button className="quick" onClick={() => goToTab("gear")}>🎽<span>Gear</span></button>
+        <button className="quick" onClick={() => goToTab("eating")}><IconEating size={26} /><span>Eating</span></button>
+        <button className="quick" onClick={() => goToTab("grocery")}><IconGrocery size={26} /><span>Grocery</span></button>
+        <button className="quick" onClick={() => goToTab("raceday")}><IconFlag size={26} /><span>Race Day</span></button>
+        <button className="quick" onClick={() => goToTab("gear")}><IconShirt size={26} /><span>Gear</span></button>
       </div>
     </div>
   );

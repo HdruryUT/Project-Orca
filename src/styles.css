@@ -74,6 +74,7 @@ body {
 /* Tabs */
 .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
 .tab-btn {
+  display: inline-flex; align-items: center; gap: 7px;
   border: 1px solid var(--line); background: var(--card); color: var(--muted);
   padding: 9px 15px; border-radius: 999px; font-size: 14px; font-weight: 600;
   cursor: pointer; transition: all 0.15s;
