@@ -85,3 +85,11 @@ export function IconGauge({ size = 18 }) {
     </Svg>
   );
 }
+
+export function IconDroplet({ size = 18 }) {
+  return (
+    <Svg size={size}>
+      <path d="M12 3.5c3 3.8 6 7.2 6 10.8a6 6 0 0 1-12 0c0-3.6 3-7 6-10.8Z" />
+    </Svg>
+  );
+}

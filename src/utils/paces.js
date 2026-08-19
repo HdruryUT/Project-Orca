@@ -54,6 +54,7 @@ export function computeZones(effort) {
     recovery: { label: "Recovery", lo: mp + 90, hi: mp + 120 },
     long: { label: "Long", lo: mp + 45, hi: mp + 75 },
     marathon: { label: "Goal marathon", lo: mp - 5, hi: mp + 5 },
+    halfmarathon: { label: "Goal half marathon", lo: hp - 5, hi: hp + 5 },
     tempo: { label: "Threshold / tempo", lo: hp - 5, hi: hp + 10 },
     intervals: { label: "Interval (5K effort)", lo: fp - 5, hi: fp + 5 },
     shakeout: { label: "Shakeout", lo: mp + 75, hi: mp + 105 },
@@ -84,6 +85,7 @@ export function zoneForWorkout(type) {
     case "intervals": return "intervals";
     case "shakeout": return "shakeout";
     case "race": return "marathon";
+    case "halfmarathon": return "halfmarathon";
     default: return null;
   }
 }

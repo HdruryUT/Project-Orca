@@ -49,14 +49,14 @@ export const PLAN = [
     },
   },
   {
-    week: 4, dates: "Aug 24–30", phase: "Cutback", focus: "Cutback — absorb & recover",
+    week: 4, dates: "Aug 24–30", phase: "Cutback", focus: "Cutback — half marathon tune-up race",
     days: {
       Mon: rest,
       Tue: { type: "easy", miles: 4, label: "Easy 4" },
       Wed: { type: "tempo", miles: 5, tempoMiles: 3, label: "Tempo 5 (3 @ threshold)" },
       Thu: { type: "easy", miles: 4, label: "Easy 4" },
       Fri: xt,
-      Sat: { type: "long", miles: 11, label: "Long 11" },
+      Sat: { type: "halfmarathon", miles: 13.1, label: "🏁 Half Marathon — 13.1" },
       Sun: { type: "recovery", miles: 3, label: "Recovery 3" },
     },
   },

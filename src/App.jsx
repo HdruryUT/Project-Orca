@@ -10,12 +10,14 @@ import GroceryTab from "./components/GroceryTab.jsx";
 import RaceDayTab from "./components/RaceDayTab.jsx";
 import GearTab from "./components/GearTab.jsx";
 import SettingsTab from "./components/SettingsTab.jsx";
-import { IconHome, IconCalendar, IconEating, IconGrocery, IconFlag, IconShirt, IconGauge } from "./components/icons.jsx";
+import FuelCalcTab from "./components/FuelCalcTab.jsx";
+import { IconHome, IconCalendar, IconEating, IconGrocery, IconFlag, IconShirt, IconGauge, IconDroplet } from "./components/icons.jsx";
 
 const TABS = [
   { id: "dashboard", label: "Dashboard", Icon: IconHome },
   { id: "schedule", label: "Schedule", Icon: IconCalendar },
   { id: "eating", label: "Eating", Icon: IconEating },
+  { id: "fuel", label: "Fuel Calc", Icon: IconDroplet },
   { id: "grocery", label: "Grocery", Icon: IconGrocery },
   { id: "raceday", label: "Race Day", Icon: IconFlag },
   { id: "gear", label: "Gear", Icon: IconShirt },
@@ -91,6 +93,7 @@ export default function App() {
       {tab === "dashboard" && <DashboardTab zones={zones} goToTab={setTab} />}
       {tab === "schedule" && <ScheduleTab zones={zones} />}
       {tab === "eating" && <EatingTab />}
+      {tab === "fuel" && <FuelCalcTab zones={zones} />}
       {tab === "grocery" && <GroceryTab />}
       {tab === "raceday" && <RaceDayTab />}
       {tab === "gear" && <GearTab />}
